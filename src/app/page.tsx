@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import {
   Accordion,
@@ -278,6 +280,16 @@ function ExperienceSection() {
 }
 
 function PricingSection() {
+  const phoneNumber = '528181139378';
+
+  const handleReservationClick = (plan: { plan: string; price: string }) => {
+    const message = `¡Hola! Estoy interesado en el "${plan.plan}" con precio de ${plan.price} para el evento "Portal de Abundancia". ¿Me podrían dar más información sobre cómo reservar mi lugar?`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section id="precios" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -319,6 +331,7 @@ function PricingSection() {
                 <Button
                   size="lg"
                   className="w-full transform bg-primary text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/30"
+                  onClick={() => handleReservationClick(plan)}
                 >
                   {plan.cta}
                 </Button>
