@@ -21,7 +21,7 @@ interface Plan {
 const pricingPlans: Plan[] = [
   {
     name: 'Individual',
-    price: '$2000 MXN',
+    price: '$2,000 MXN',
     priceDetail: '(140 USD)',
     features: ['Acceso completo para 1 persona las 14 noches del ciclo.'],
     isFeatured: false,
