@@ -27,6 +27,7 @@ import {
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { PricingSection } from '@/components/layout/pricing-section';
 
 const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
@@ -85,21 +86,6 @@ const experienceDetails = [
     night: 'Noche 4: Integración y Manifestación',
     description:
       'Cerraremos nuestro portal integrando las nuevas energías y conocimientos. Aprenderás herramientas prácticas para mantener y expandir la abundancia en tu vida diaria.',
-  },
-];
-
-const pricingPlans = [
-  {
-    plan: 'Individual',
-    price: '$44 USD',
-    features: ['Acceso completo para 1 persona a las 4 noches del evento.'],
-    cta: 'Reserva tu lugar',
-  },
-  {
-    plan: 'Parejas',
-    price: '$77 USD',
-    features: ['Acceso completo para 2 personas a las 4 noches del evento.'],
-    cta: 'Reserva su lugar',
   },
 ];
 
@@ -174,12 +160,13 @@ function DescriptionSection() {
         <h2 className="font-headline text-4xl font-bold text-primary-foreground md:text-5xl">
           ACTIVA TU ABUNDANCIA CON LA AYUDA DE LOS SERES DE LUZ.
         </h2>
-        <p className="mt-6 text-lg text-muted-foreground md:text-xl">
-          Este evento está diseñado para ti si sientes que mereces más, si
-          buscas un cambio profundo y estás listo para conectar con tu poder
-          interior. A través de un viaje de 4 noches, activaremos juntos un
-          portal energético para sanar, liberar y atraer la abundancia en todas
-          las áreas de tu vida.
+        <p className="mt-6 whitespace-pre-wrap text-lg text-muted-foreground md:text-xl">
+          Si estás viendo este video, es porque mereces y estás listo para poder
+          conectar con tu poder innato de creación de abundancia.
+          {'\n\n'}A través de un viaje de 14 noches activaremos juntos un portal
+          interdimensional donde trabajarás con Astar Katar, con los seres de
+          las estrellas, ángeles y arcángeles, para sanar, liberar y atraer la
+          abundancia en todas las áreas de tu vida.
         </p>
       </div>
     </section>
@@ -274,71 +261,6 @@ function ExperienceSection() {
             </AccordionItem>
           ))}
         </Accordion>
-      </div>
-    </section>
-  );
-}
-
-function PricingSection() {
-  const phoneNumber = '528181139378';
-
-  const handleReservationClick = (plan: { plan: string; price: string }) => {
-    const message = `¡Hola! Estoy interesado en el "${plan.plan}" con precio de ${plan.price} para el evento "Portal de Abundancia". ¿Me podrían dar más información sobre cómo reservar mi lugar?`;
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(whatsappUrl, '_blank');
-  };
-
-  return (
-    <section id="precios" className="py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h2 className="font-headline text-4xl font-bold text-primary-foreground md:text-5xl">
-            Invierte en Tu Abundancia
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Elige el plan que resuene contigo y comienza tu transformación.
-          </p>
-        </div>
-        <div className="mt-12 flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch">
-          {pricingPlans.map((plan, index) => (
-            <Card
-              key={index}
-              className={`flex w-full max-w-sm flex-col border-2 bg-card shadow-lg ${
-                index === 0
-                  ? 'border-transparent'
-                  : 'border-accent shadow-accent/20'
-              }`}
-            >
-              <CardHeader className="text-center">
-                <CardTitle className="font-headline text-3xl">
-                  {plan.plan}
-                </CardTitle>
-                <p className="text-5xl font-bold text-primary">{plan.price}</p>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <ul className="space-y-2">
-                  {plan.features.map((feature, fIndex) => (
-                    <li key={fIndex} className="flex items-center">
-                      <CheckCircle2 className="mr-2 h-5 w-5 text-primary" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button
-                  size="lg"
-                  className="w-full transform bg-primary text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/30"
-                  onClick={() => handleReservationClick(plan)}
-                >
-                  {plan.cta}
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
       </div>
     </section>
   );
