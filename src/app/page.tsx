@@ -135,7 +135,7 @@ function DescriptionSection() {
 
 function InclusionsSection() {
   return (
-    <section id="inclusiones" className="py-12 md:py-16">
+    <section id="inclusiones" className="pb-12 md:pb-16 pt-4 md:pt-8">
       <div className="container mx-auto max-w-4xl px-4">
         <div className="text-center">
           <h2 className="font-headline text-4xl font-bold text-primary-foreground md:text-5xl">
@@ -169,7 +169,7 @@ function ExperienceSection() {
             La Experiencia Nocturna
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Cada noche es un paso más profundo hacia tu nuevo yo.
+            Desde que te inscribes y durante todas las noches serás trabajado y activado a través del portal multidimensional de Astar Katar.
           </p>
         </div>
         <Accordion type="single" collapsible className="mt-12 w-full">
