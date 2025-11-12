@@ -9,10 +9,7 @@ import {
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-  CheckCircle2,
-  Star,
-} from 'lucide-react';
+import { CheckCircle2, Star } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
@@ -27,29 +24,6 @@ const inclusions = [
   'Acceso a un grupo exclusivo de WhatsApp para apoyo continuo.',
 ];
 
-const experienceDetails = [
-  {
-    night: 'Noche 1: Apertura y Conexión',
-    description:
-      'Iniciaremos nuestro viaje abriendo el portal energético. Realizaremos una meditación de limpieza y conexión con la fuente de la abundancia universal para preparar nuestro campo energético.',
-  },
-  {
-    night: 'Noche 2: Sanando Creencias Limitantes',
-    description:
-      'Identificaremos y liberaremos los bloqueos y creencias que te impiden prosperar. Una noche de sanación profunda para reprogramar tu subconsciente hacia la riqueza.',
-  },
-  {
-    night: 'Noche 3: Activación de la Prosperidad',
-    description:
-      'Recibirás potentes activaciones energéticas para sintonizar tu vibración con la frecuencia de la abundancia. Magnetiza tus deseos y abre las puertas al éxito material y espiritual.',
-  },
-  {
-    night: 'Noche 4: Integración y Manifestación',
-    description:
-      'Cerraremos nuestro portal integrando las nuevas energías y conocimientos. Aprenderás herramientas prácticas para mantener y expandir la abundancia en tu vida diaria.',
-  },
-];
-
 export default function PortalDeAbundanciaPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background font-body text-foreground">
@@ -58,7 +32,6 @@ export default function PortalDeAbundanciaPage() {
         <HeroSection />
         <DescriptionSection />
         <InclusionsSection />
-        <ExperienceSection />
         <PricingSection />
       </main>
       <Footer />
@@ -155,37 +128,6 @@ function InclusionsSection() {
             ))}
           </ul>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function ExperienceSection() {
-  return (
-    <section id="experiencia" className="bg-secondary/50 py-16 md:py-24">
-      <div className="container mx-auto max-w-4xl px-4">
-        <div className="text-center">
-          <h2 className="font-headline text-4xl font-bold text-primary-foreground md:text-5xl">
-            La Experiencia Nocturna
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Desde que te inscribes y durante todas las noches serás trabajado y activado a través del portal multidimensional de Astar Katar.
-          </p>
-        </div>
-        <Accordion type="single" collapsible className="mt-12 w-full">
-          {experienceDetails.map((detail, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="font-headline text-xl hover:no-underline">
-                <div className="flex items-center">
-                  <Star className="mr-3 h-5 w-5 text-accent" /> {detail.night}
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="text-base text-muted-foreground">
-                {detail.description}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
       </div>
     </section>
   );
