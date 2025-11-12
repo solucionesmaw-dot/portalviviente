@@ -27,9 +27,10 @@ const pricingPlans: Plan[] = [
     isFeatured: false,
   },
   {
-    name: 'Parejas',
-    price: '$77 USD',
-    features: ['Acceso completo para 2 personas a las 4 noches del evento.'],
+    name: 'Parejas sentimentales',
+    price: '$3,000 MXN',
+    priceDetail: '(210 USD)',
+    features: ['Acceso completo para parejas sentimentales las 14 noches del ciclo.'],
     isFeatured: true,
   },
 ];
