@@ -13,6 +13,7 @@ import { CheckCircle2 } from 'lucide-react';
 interface Plan {
   name: string;
   price: string;
+  priceDetail?: string;
   features: string[];
   isFeatured: boolean;
 }
@@ -20,8 +21,9 @@ interface Plan {
 const pricingPlans: Plan[] = [
   {
     name: 'Individual',
-    price: '$44 USD',
-    features: ['Acceso completo para 1 persona a las 4 noches del evento.'],
+    price: '$2000 MXN',
+    priceDetail: '(140 USD)',
+    features: ['Acceso completo para 1 persona las 14 noches del ciclo.'],
     isFeatured: false,
   },
   {
@@ -68,6 +70,7 @@ export function PricingSection() {
                   {plan.name}
                 </CardTitle>
                 <p className="text-5xl font-bold text-primary">{plan.price}</p>
+                {plan.priceDetail && <p className="text-lg text-muted-foreground">{plan.priceDetail}</p>}
               </CardHeader>
               <CardContent className="flex-grow">
                 <ul className="space-y-2">
