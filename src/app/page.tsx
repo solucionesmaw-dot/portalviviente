@@ -22,7 +22,7 @@ const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
 const inclusions = [
   'Meditaciones guiadas para la reprogramación mental.',
-  'Activaciones energéticas para elevar tu vibración.',
+  'Activación y reconexión de tus fibras de ADN con la abundancia del dinero para elevar tu vibración.',
   'Trabajo profundo con la energía de la abundancia.',
   'Acceso a un grupo exclusivo de WhatsApp para apoyo continuo.',
 ];
