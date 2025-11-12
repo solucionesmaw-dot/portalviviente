@@ -142,8 +142,8 @@ function HeroSection() {
           Portal de Abundancia
         </h1>
         <p className="mt-4 text-lg text-gray-200 md:text-xl lg:text-2xl">
-          Un viaje de 4 noches para transformar tu realidad y manifestar la vida
-          que mereces.
+          Un viaje de 14 noches para transformar tu realidad y manifestar la
+          vida que deseas.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button
