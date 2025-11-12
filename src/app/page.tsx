@@ -135,7 +135,7 @@ function DescriptionSection() {
 
 function InclusionsSection() {
   return (
-    <section id="inclusiones" className="py-16 md:py-24">
+    <section id="inclusiones" className="py-12 md:py-16">
       <div className="container mx-auto max-w-4xl px-4">
         <div className="text-center">
           <h2 className="font-headline text-4xl font-bold text-primary-foreground md:text-5xl">
