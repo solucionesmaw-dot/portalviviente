@@ -35,7 +35,7 @@ const pricingPlans: Plan[] = [
 export function PricingSection() {
   const handleReservationClick = (plan: Plan) => {
     const phoneNumber = '528181139378';
-    const message = `Hola, estoy interesado en el ${plan.name} de $${plan.price} para el Portal de Abundancia. ¡Gracias!`;
+    const message = `Hola, estoy interesado en el ${plan.name} de ${plan.price} para el Portal de Abundancia. ¡Gracias!`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
@@ -47,7 +47,7 @@ export function PricingSection() {
       <div className="container mx-auto px-4">
         <div className="text-center">
           <h2 className="font-headline text-4xl font-bold text-primary-foreground md:text-5xl">
-            Invierte en Tu Abundancia
+            Costo de Participación:
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
             Elige el plan que resuene contigo y comienza tu transformación.
