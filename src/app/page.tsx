@@ -8,21 +8,10 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import {
-  Briefcase,
   CheckCircle2,
-  Gem,
-  HeartHandshake,
-  Sparkles,
   Star,
-  Users,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Header } from '@/components/layout/header';
@@ -30,34 +19,6 @@ import { Footer } from '@/components/layout/footer';
 import { PricingSection } from '@/components/layout/pricing-section';
 
 const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
-
-const benefits = [
-  {
-    icon: <Gem className="h-10 w-10 text-primary" />,
-    title: 'Abundancia Material',
-    description: 'Desbloquea tu capacidad de atraer prosperidad y riqueza.',
-  },
-  {
-    icon: <Briefcase className="h-10 w-10 text-primary" />,
-    title: 'Éxito Profesional',
-    description: 'Impulsa tu carrera y alcanza tus metas laborales.',
-  },
-  {
-    icon: <Sparkles className="h-10 w-10 text-primary" />,
-    title: 'Realización Personal',
-    description: 'Conecta con tu propósito y vive una vida plena.',
-  },
-  {
-    icon: <HeartHandshake className="h-10 w-10 text-primary" />,
-    title: 'Relaciones Armoniosas',
-    description: 'Sana y fortalece tus vínculos afectivos.',
-  },
-  {
-    icon: <Users className="h-10 w-10 text-primary" />,
-    title: 'Bienestar Integral',
-    description: 'Equilibra tu cuerpo, mente y espíritu.',
-  },
-];
 
 const inclusions = [
   'Meditaciones guiadas para la reprogramación mental.',
@@ -96,7 +57,6 @@ export default function PortalDeAbundanciaPage() {
       <main className="flex-1">
         <HeroSection />
         <DescriptionSection />
-        <BenefitsSection />
         <InclusionsSection />
         <ExperienceSection />
         <PricingSection />
@@ -168,41 +128,6 @@ function DescriptionSection() {
           las estrellas, ángeles y arcángeles, para sanar, liberar y atraer la
           abundancia en todas las áreas de tu vida.
         </p>
-      </div>
-    </section>
-  );
-}
-
-function BenefitsSection() {
-  return (
-    <section id="beneficios" className="bg-secondary/50 py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h2 className="font-headline text-4xl font-bold text-primary-foreground md:text-5xl">
-            Beneficios que Transformarán tu Vida
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Experimenta una metamorfosis en todas las áreas de tu existencia.
-          </p>
-        </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
-          {benefits.map((benefit, index) => (
-            <Card
-              key={index}
-              className="transform border-transparent bg-card text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-            >
-              <CardHeader className="items-center">
-                {benefit.icon}
-                <CardTitle className="font-headline text-xl">
-                  {benefit.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{benefit.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
       </div>
     </section>
   );
