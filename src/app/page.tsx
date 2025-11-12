@@ -172,7 +172,7 @@ function DescriptionSection() {
     <section id="descripcion" className="py-16 md:py-24">
       <div className="container mx-auto max-w-4xl px-4 text-center">
         <h2 className="font-headline text-4xl font-bold text-primary-foreground md:text-5xl">
-          Abre las Puertas a una Vida Plena
+          ACTIVA TU ABUNDANCIA CON LA AYUDA DE LOS SERES DE LUZ.
         </h2>
         <p className="mt-6 text-lg text-muted-foreground md:text-xl">
           Este evento está diseñado para ti si sientes que mereces más, si
